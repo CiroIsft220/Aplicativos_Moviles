@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Interacción con JavaScript</title>
+
+    </head>
+
+    <body>
+        
+        <h1>Interacción con JavaScript</h1>
+
+        <button id="miBoton">Haz click aqui</button>
+        <p id="resultado">Esperando click...</p>
+
+        <button id="tamaño">Tamaño</button>
+        <p id="tamañoCambiado">Haz click aqui para aumentar el tamaño del texto</p>
+
+        <button id="color">Coloreado</button>
+        <p id="coloreado">Haz click aqui para cambiar el color del texto</p>
+
+        <button id="botonRestablecer">Haz click aqui para restablecer</button>
+        <p id="restablecido">Botón disponible en cualquier momento</p>
+
+        <p id="contadorClicks">Clicks totales: 0</p>
+
+        <script>
+
+            const boton = document.getElementById("miBoton");
+            const parrafo = document.getElementById("resultado");
+            const tamaño = document.getElementById("tamaño");
+            const tamañoCambiado = document.getElementById("tamañoCambiado");
+            const color = document.getElementById("color");
+            const coloreado = document.getElementById("coloreado");
+            const restablecer = document.getElementById("botonRestablecer");
+            const restablecido = document.getElementById("restablecido");
+            const contadorTexto = document.getElementById("contadorClicks");
+
+            let contador = 0;
+
+            const cadaBoton = document.querySelectorAll("button");
+            cadaBoton.forEach(function (boton) {
+                boton.addEventListener("click", function () {
+                    contador++;
+                    contadorTexto.textContent = "Clicks totales: " + contador;
+
+                });
+
+            });
+
+            boton.addEventListener("click", function() {
+
+                parrafo.textContent = "¡Has hecho click en el botón!";
+                parrafo.style.color = "blue";
+                parrafo.style.fontWeight = "bold";
+
+            });
+
+            tamaño.addEventListener("click", function() {
+
+                parrafo.style.fontSize = "30px";
+
+            });
+
+            color.addEventListener("click", function() {
+
+                parrafo.style.color = "green";
+
+            });
+
+            restablecer.addEventListener("click", function() {
+
+                restablecido.textContent = "Valores restablecidos con exito";
+                restablecido.style.color = "red";
+
+                parrafo.textContent = "Esperando click...";
+                parrafo.style.color = "black";
+                parrafo.style.fontWeight = "normal";
+                parrafo.style.fontSize = "16px";
+
+            });
+
+        </script>
+
+    </body>
+
+</html>

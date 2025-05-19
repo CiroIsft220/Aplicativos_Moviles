@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mi Primer Programa JavaScript</title>
+
+    </head>
+
+    <body>
+    
+        <h1>Mi primer script de JavaScript</h1>
+    
+        <script>//Mi primer programa en JavaScript
+
+            console.log("¡Hola Mundo desde la consola!");
+
+            let nombre = "Ciro";
+            const edad = 19;
+            let mayordeEdad = true;
+            var ciudad = "Buenos Aires";
+
+            if (mayordeEdad === true) {
+
+                mayordeEdad = "es cierto ";
+            } else {
+
+                console.log("no es cierto ");
+            }
+
+            let usuario = {
+
+                nombre: "Ciro",
+                edad: 19,
+                ciudad: "Buenos Aires",
+                mayordeEdad: true 
+            }
+
+            let basedeDatos = [nombre, edad, ciudad];
+
+            console.log("Nombre", nombre);
+            console.log("Edad", edad);
+            console.log("Ciudad", ciudad);
+            console.log("Mayor de edad", mayordeEdad);
+
+            console.log("Hola " + nombre + ", tienes " + edad + " años y " + mayordeEdad + "que eres mayor de edad.");
+
+            console.log(`Hola ${nombre}, tienes ${edad} años, vives en ${ciudad} y ${mayordeEdad} que eres mayor de edad`);
+
+            let usuarios = [
+
+                { nombre: "Julieta", edad: 25, ciudad: "Tombuctu", mayordeEdad: true},
+                {nombre: "Hernan", edad: 71, ciudad: "Seúl", mayordeEdad: true},
+                {nombre: "Felipe", edad: 15, ciudad: "Potosí", mayordeEdad: false}
+            ];
+
+            console.table(usuarios);
+
+        </script>
+
+    </body>
+
+</html>

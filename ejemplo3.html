@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora de Edad</title>
+
+    </head>
+
+    <body>
+    
+        <h1>Calculadora de Edad</h1>
+
+        <label>Día: <input type="number" id="dia" min="1" max="31"></label><br> <br>
+        <label>Mes: <input type="number" id="mes" min="1" max="12"></label><br> <br>
+        <label>Año: <input type="number" id="año"></label><br> <br>
+        <button id="calcular">Calcular Edad</button> <br>
+
+        <p id="resultadoEdad"></p>
+
+        <script>
+
+                function calcularEdad(diaNacimiento, mesNacimiento, añoNacimiento) {
+
+                    const hoy = new Date();
+                    const fechaNacimiento = new Date(añoNacimiento, mesNacimiento - 1, diaNacimiento);
+
+                    const añoActual = hoy.getFullYear();
+                    const mesActual = hoy.getMonth();
+                    const diaActual = hoy.getDate();
+
+
+                    if (fechaNacimiento > hoy) {
+
+                        return "El año de nacimiento no puede ser futuro";
+                    } else if (añoActual - añoNacimiento > 120) {
+
+                        return "¿Estás seguro de ese año?";
+                    } else {
+                        
+                    let edad = añoActual - añoNacimiento;
+                    let meses = mesActual - mesNacimiento;
+                    let dias = diaActual - diaNacimiento;
+                    
+                    if (dias < 0) {
+                        meses--;
+                        dias += new Date(añoActual, mesActual, 0).getDate();
+                        
+                    }
+
+                    if (meses < 0) {
+
+                        edad--;
+                        meses += 12;
+                    }
+
+                    return `Tienes aproximadamente ${edad} años, ${meses}  meses y ${dias} días.`;
+                }
+
+            }
+
+            document.getElementById("calcular").addEventListener("click", function () {
+                const dia = document.getElementById("dia").value;
+                const mes = document.getElementById("mes").value;
+                const año = document.getElementById("año").value;
+
+                const resultado = calcularEdad(dia, mes, año);
+                document.getElementById("resultadoEdad").textContent = resultado;
+            });
+
+        </script>
+
+    </body>
+
+</html>
