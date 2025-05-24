@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Buscar menor y mayor</title>
+    </head>
+
+    <body>
+
+        <h2>Ingrese 10 valores</h2>
+
+        <div>
+
+            <input type="number" id="v1">
+            <input type="number" id="v2">
+            <input type="number" id="v3">
+            <input type="number" id="v4">
+            <input type="number" id="v5">
+            <input type="number" id="v6">
+            <input type="number" id="v7">
+            <input type="number" id="v8">
+            <input type="number" id="v9">
+            <input type="number" id="v10">
+
+        </div>
+
+        <button id="menor">Buscar menor</button>
+        <button id="mayor">Buscar mayor</button>
+        <p id="resultado"></p>
+
+        <script>
+
+            function obtenerValores() {
+                let valores = [];
+
+                for (let i = 1; i <= 10; i++) {
+
+                    valores.push(parseFloat(document.getElementById("v" + i).value));
+                }
+                return valores;
+            }
+
+            document.getElementById("menor").onclick = function() {
+
+                const valores = obtenerValores();
+                const menor = Math.min(...valores);
+                document.getElementById("resultado").textContent = "El menor valor es: " + menor;
+            };
+
+            document.getElementById("mayor").onclick = function() {
+
+                const valores = obtenerValores();
+                const mayor = Math.max(...valores);
+                document.getElementById("resultado").textContent = "El mayor valor es: " + mayor;
+            };
+
+        </script>
+
+    </body>
+
+</html>

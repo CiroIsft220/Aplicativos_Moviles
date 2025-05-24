@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>Verificación de clave</title>
+
+    </head>
+
+    <body>
+
+        <h2>Ingrese la clave para acceder</h2>
+        <input type="password" id="clave">
+        <button onclick="verificarClave()">Ingresar</button>
+        <p id="mensaje"></p>
+
+        <script>
+            const clave_correcta = "12345";
+            let intentos = 3;
+
+            function verificarClave() {
+            const input = document.getElementById("clave");
+            const mensaje = document.getElementById("mensaje");
+            const clave_ingresada = input.value;
+
+            if (clave_ingresada === clave_correcta) {
+                mensaje.textContent = "Inicio de sesión completado";
+                input.disabled = true;
+            } else {
+                intentos--;
+                if (intentos > 0) {
+                mensaje.textContent = `Clave incorrecta. Intentos restantes: ${intentos}`;
+                } else {
+                mensaje.textContent = "Acceso denegado";
+                input.disabled = true;
+                }
+            }
+
+            input.value = "";
+            }
+
+        </script>
+    
+    </body>
+
+</html>
