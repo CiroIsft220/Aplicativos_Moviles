@@ -175,3 +175,4 @@ for (const temporada in totalPorTemporada) {
 }
 console.log(`\nTotal de descuentos aplicados: $${redondear2(totalDescuentos)}`);
 console.log("=".repeat(40));
+ 
