@@ -54,24 +54,24 @@ Ejemplo inválido: "12345" (es solo números) o "¡Hola!" (es demasiado corto)
 Mensajes del Sistema:
 
 Si todo es correcto:
-Mensaje de éxito: "🎉 ¡FORMULARIO VÁLIDO! Todos los campos son correctos. El formulario puede ser enviado."
+Mensaje de éxito: " ¡FORMULARIO VÁLIDO! Todos los campos son correctos. El formulario puede ser enviado."
 
 Si hay errores:
 El sistema te mostrará un mensaje de advertencia con una lista de los errores que necesitas corregir:
 
-Ejemplo: "⚠️ FORMULARIO INCOMPLETO. Corrige los siguientes errores:"
+Ejemplo: "⚠ FORMULARIO INCOMPLETO. Corrige los siguientes errores:"
 
-"❌ Error en nombre: El nombre debe tener entre 2 y 50 caracteres."
+" Error en nombre: El nombre debe tener entre 2 y 50 caracteres."
 
-"❌ Error en email: El formato del email es inválido."
+" Error en email: El formato del email es inválido."
 
-"❌ Error en teléfono: El teléfono debe tener entre 8 y 15 dígitos."
+" Error en teléfono: El teléfono debe tener entre 8 y 15 dígitos."
 
-"❌ Error en edad: La edad debe estar entre 16 y 99 años."
+" Error en edad: La edad debe estar entre 16 y 99 años."
 
-"❌ Error en mensaje: El mensaje debe tener al menos 10 caracteres."
+" Error en mensaje: El mensaje debe tener al menos 10 caracteres."
 
-Si hay algún campo correcto, se mostrará un mensaje que dice que ese campo está bien, por ejemplo: "✅ Campo teléfono válido."
+Si hay algún campo correcto, se mostrará un mensaje que dice que ese campo está bien, por ejemplo: " Campo teléfono válido."
 
 Ejemplos de Formularios y Resultados:
 Formulario Válido:
@@ -81,7 +81,7 @@ Correo Electrónico: "maria.garcia@empresa.com"
 Teléfono: "011-1234-5678"
 Edad: 28
 Mensaje: "Me gustaría recibir información sobre sus productos y servicios disponibles."
-Resultado: "🎉 ¡FORMULARIO VÁLIDO! Todos los campos son correctos."
+Resultado: " ¡FORMULARIO VÁLIDO! Todos los campos son correctos."
 
 Formulario con Errores:
 
@@ -92,15 +92,15 @@ Edad: 10
 Mensaje: "Hola"
 Resultado:
 
-"❌ Error en nombre: El nombre debe tener entre 2 y 50 caracteres."
+"Error en nombre: El nombre debe tener entre 2 y 50 caracteres."
 
-"❌ Error en email: El formato del email es inválido."
+"Error en email: El formato del email es inválido."
 
-"❌ Error en teléfono: El teléfono debe tener entre 8 y 15 dígitos."
+"Error en teléfono: El teléfono debe tener entre 8 y 15 dígitos."
 
-"❌ Error en edad: La edad debe estar entre 16 y 99 años."
+"Error en edad: La edad debe estar entre 16 y 99 años."
 
-"❌ Error en mensaje: El mensaje debe tener al menos 10 caracteres."
+"Error en mensaje: El mensaje debe tener al menos 10 caracteres."
 
 Formulario con Campos Vacíos:
 
